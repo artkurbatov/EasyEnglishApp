@@ -12,13 +12,23 @@ struct HomeView: View {
    @EnvironmentObject var model: ContentModel
     
     var body: some View {
-        Text("Hello, world!")
+         
+        ScrollView {
+            
+            LazyVStack {
+                
+                ForEach(model.modules) { module in
+                    
+                    SingleModuleView(image: module.content.image, title: module.category, description: module.content.description)
+                }
+            }
             .padding()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView().environmentObject(ContentModel())
     }
 }
