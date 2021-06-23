@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B82B4C0F268395E600D7AAC7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82B4C0E268395E600D7AAC7 /* Models.swift */; };
+		B82B4C0F268395E600D7AAC7 /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82B4C0E268395E600D7AAC7 /* LessonModel.swift */; };
 		B82B4C11268396A300D7AAC7 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82B4C10268396A300D7AAC7 /* ContentModel.swift */; };
 		B82B4C132683971300D7AAC7 /* lessonData.json in Resources */ = {isa = PBXBuildFile; fileRef = B82B4C122683971300D7AAC7 /* lessonData.json */; };
 		B82B4C15268397E300D7AAC7 /* testData.json in Resources */ = {isa = PBXBuildFile; fileRef = B82B4C14268397E300D7AAC7 /* testData.json */; };
+		B82B4C17268398B500D7AAC7 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82B4C16268398B500D7AAC7 /* TestModel.swift */; };
 		B83DC4C5268393BD001D1289 /* EasyEnglishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DC4C4268393BD001D1289 /* EasyEnglishApp.swift */; };
 		B83DC4C7268393BD001D1289 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DC4C6268393BD001D1289 /* HomeView.swift */; };
 		B83DC4C9268393BD001D1289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83DC4C8268393BD001D1289 /* Assets.xcassets */; };
@@ -18,10 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B82B4C0E268395E600D7AAC7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B82B4C0E268395E600D7AAC7 /* LessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonModel.swift; sourceTree = "<group>"; };
 		B82B4C10268396A300D7AAC7 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		B82B4C122683971300D7AAC7 /* lessonData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lessonData.json; sourceTree = "<group>"; };
 		B82B4C14268397E300D7AAC7 /* testData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testData.json; sourceTree = "<group>"; };
+		B82B4C16268398B500D7AAC7 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		B83DC4C1268393BD001D1289 /* EasyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83DC4C4268393BD001D1289 /* EasyEnglishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyEnglishApp.swift; sourceTree = "<group>"; };
 		B83DC4C6268393BD001D1289 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -61,8 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				B83DC4C4268393BD001D1289 /* EasyEnglishApp.swift */,
-				B85145C7268394B30042CCE3 /* ViewModels */,
 				B83DC4D3268393C6001D1289 /* Views */,
+				B85145C7268394B30042CCE3 /* ViewModels */,
 				B85145C8268394C60042CCE3 /* Models */,
 				B85145C9268394F20042CCE3 /* Data */,
 				B83DC4C8268393BD001D1289 /* Assets.xcassets */,
@@ -99,7 +101,8 @@
 		B85145C8268394C60042CCE3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B82B4C0E268395E600D7AAC7 /* Models.swift */,
+				B82B4C0E268395E600D7AAC7 /* LessonModel.swift */,
+				B82B4C16268398B500D7AAC7 /* TestModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,8 +187,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B82B4C0F268395E600D7AAC7 /* Models.swift in Sources */,
+				B82B4C0F268395E600D7AAC7 /* LessonModel.swift in Sources */,
 				B82B4C11268396A300D7AAC7 /* ContentModel.swift in Sources */,
+				B82B4C17268398B500D7AAC7 /* TestModel.swift in Sources */,
 				B83DC4C7268393BD001D1289 /* HomeView.swift in Sources */,
 				B83DC4C5268393BD001D1289 /* EasyEnglishApp.swift in Sources */,
 			);
