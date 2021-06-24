@@ -10,16 +10,17 @@ import Foundation
 class ContentModel: ObservableObject {
     
     @Published var modules = [Module]()
-    @Published var tests = [Test]()
+    @Published var currentModule: Module?
+    
+    var currentModuleIndex = 0
     
     init() {
         getLessonData()
-        getTestData()
     }
     
     func getLessonData() {
         
-        let url = Bundle.main.url(forResource: "lessonData", withExtension: "json")
+        let url = Bundle.main.url(forResource: "data", withExtension: "json")
         do{
             let data = try Data(contentsOf: url!)
             let decoder = JSONDecoder()
@@ -32,19 +33,13 @@ class ContentModel: ObservableObject {
         
     }
     
-    func getTestData() {
-        
-        let url = Bundle.main.url(forResource: "testData", withExtension: "json")
-        do{
-            let data = try Data(contentsOf: url!)
-            let decoder = JSONDecoder()
-            let modules = try decoder.decode([Module].self, from: data)
-            self.modules = modules
+    func beginModule(_ moduleId: Int){
+        for intdex in 0..<modules.count {
+            if modules[intdex].id == moduleId{
+                currentModuleIndex = intdex
+                break
+            }
         }
-        catch{
-            print(error)
-        }
+        currentModule = modules[currentModuleIndex]
     }
-    
-    
 }

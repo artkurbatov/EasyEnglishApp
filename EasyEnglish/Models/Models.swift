@@ -2,7 +2,7 @@
 //  Models.swift
 //  EasyEnglish
 //
-//  Created by Kurbatov Artem on 23.06.2021.
+//  Created by Kurbatov Artem on 24.06.2021.
 //
 
 import Foundation
@@ -12,6 +12,7 @@ struct Module: Decodable, Identifiable {
     var id: Int
     var category: String
     var content: Content
+    var test: Test
 }
 
 struct Content: Decodable, Identifiable {
@@ -29,4 +30,18 @@ struct Lesson: Decodable, Identifiable {
     var title: String
     var explanation: String
     
+}
+
+struct Test: Decodable, Identifiable {
+    
+    var id: Int
+    var questions: [Question]
+}
+
+struct Question: Decodable, Identifiable {
+    
+    var id: Int
+    var content: String
+    var correctIndex: Int
+    var answers: [String]
 }
