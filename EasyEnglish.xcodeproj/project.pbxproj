@@ -17,6 +17,7 @@
 		B85FCB062683A4B7003AA582 /* SingleModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FCB052683A4B7003AA582 /* SingleModuleView.swift */; };
 		B86D79CA2683C4F700FEB1AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D79C92683C4F700FEB1AF /* ContentView.swift */; };
 		B89100062690484500DC8320 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89100052690484500DC8320 /* ContentDetailView.swift */; };
+		B891000826905D3600DC8320 /* ContentDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B891000726905D3600DC8320 /* ContentDescriptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		B85FCB052683A4B7003AA582 /* SingleModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleModuleView.swift; sourceTree = "<group>"; };
 		B86D79C92683C4F700FEB1AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B89100052690484500DC8320 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		B891000726905D3600DC8320 /* ContentDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDescriptionView.swift; sourceTree = "<group>"; };
+		B891000A26905FEF00DC8320 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,7 @@
 			children = (
 				B83DC4C3268393BD001D1289 /* EasyEnglish */,
 				B83DC4C2268393BD001D1289 /* Products */,
+				B891000926905FEF00DC8320 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +95,7 @@
 				B85FCB052683A4B7003AA582 /* SingleModuleView.swift */,
 				B86D79C92683C4F700FEB1AF /* ContentView.swift */,
 				B89100052690484500DC8320 /* ContentDetailView.swift */,
+				B891000726905D3600DC8320 /* ContentDescriptionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +122,14 @@
 				B834113E2684615C006EA13E /* data.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		B891000926905FEF00DC8320 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B891000A26905FEF00DC8320 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B85FCB062683A4B7003AA582 /* SingleModuleView.swift in Sources */,
+				B891000826905D3600DC8320 /* ContentDescriptionView.swift in Sources */,
 				B86D79CA2683C4F700FEB1AF /* ContentView.swift in Sources */,
 				B8341141268462C4006EA13E /* Models.swift in Sources */,
 				B89100062690484500DC8320 /* ContentDetailView.swift in Sources */,

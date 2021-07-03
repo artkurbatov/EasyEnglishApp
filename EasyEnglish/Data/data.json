@@ -97,7 +97,7 @@
         "content": {
             "id": 0,
             "image": "monitor",
-            "description": "Пассивный залог",
+            "description": "Пассивный залог в английском языке",
             "lessons": [
                 {
                     "id": 0,
@@ -128,7 +128,7 @@
         "content": {
             "id": 0,
             "image": "problem",
-            "description": "Вопросительные предложения в английском предложении",
+            "description": "Вопросительные предложения в английском языке",
             "lessons": [
                 {
                     "id": 0,

@@ -29,7 +29,7 @@ struct HomeView: View {
                                 destination: ContentView()
                                     .onAppear(perform: {
                                         model.beginModule(module.id)
-                                    }),
+                                    }), 
                                 label: {
                                     SingleModuleView(image: module.content.image, title: module.category, discription: module.content.description)
                                 })
