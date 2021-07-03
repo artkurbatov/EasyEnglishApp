@@ -16,6 +16,7 @@
 		B83DC4CC268393BD001D1289 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83DC4CB268393BD001D1289 /* Preview Assets.xcassets */; };
 		B85FCB062683A4B7003AA582 /* SingleModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FCB052683A4B7003AA582 /* SingleModuleView.swift */; };
 		B86D79CA2683C4F700FEB1AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D79C92683C4F700FEB1AF /* ContentView.swift */; };
+		B89100062690484500DC8320 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89100052690484500DC8320 /* ContentDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B83DC4CD268393BD001D1289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B85FCB052683A4B7003AA582 /* SingleModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleModuleView.swift; sourceTree = "<group>"; };
 		B86D79C92683C4F700FEB1AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B89100052690484500DC8320 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				B83DC4C6268393BD001D1289 /* HomeView.swift */,
 				B85FCB052683A4B7003AA582 /* SingleModuleView.swift */,
 				B86D79C92683C4F700FEB1AF /* ContentView.swift */,
+				B89100052690484500DC8320 /* ContentDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				B85FCB062683A4B7003AA582 /* SingleModuleView.swift in Sources */,
 				B86D79CA2683C4F700FEB1AF /* ContentView.swift in Sources */,
 				B8341141268462C4006EA13E /* Models.swift in Sources */,
+				B89100062690484500DC8320 /* ContentDetailView.swift in Sources */,
 				B82B4C11268396A300D7AAC7 /* ContentModel.swift in Sources */,
 				B83DC4C7268393BD001D1289 /* HomeView.swift in Sources */,
 				B83DC4C5268393BD001D1289 /* EasyEnglishApp.swift in Sources */,
