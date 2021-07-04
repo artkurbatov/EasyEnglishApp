@@ -80,12 +80,12 @@
                 {
                     "id": 0,
                     "content": "Во",
-                    "correctIndex": 0,
+                    "correctIndex": 1,
                     "answers": [
-                        "",
-                        "",
-                        "",
-                        ""
+                        "1",
+                        "2",
+                        "3",
+                        "4"
                     ]
                 }
             ]
