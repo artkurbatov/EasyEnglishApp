@@ -79,7 +79,7 @@
             "questions": [
                 {
                     "id": 0,
-                    "content": "Вопрос",
+                    "content": "Во",
                     "correctIndex": 0,
                     "answers": [
                         "",
@@ -111,7 +111,7 @@
             "questions": [
                 {
                     "id": 0,
-                    "content": "Вопрос",
+                    "content": "пр",
                     "correctIndex": 2,
                     "answers": [
                         "",
@@ -162,7 +162,7 @@
             "questions": [
                 {
                     "id": 0,
-                    "content": "Вопрос",
+                    "content": "ос",
                     "correctIndex": 3,
                     "answers": [
                         "",

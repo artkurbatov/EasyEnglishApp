@@ -56,7 +56,7 @@ struct ContentView: View {
             }
             .accentColor(.black)
             .padding()
-            .navigationTitle(model.currentModule?.category ?? "")
+            .navigationBarTitle(model.currentModule?.category ?? "")
         }
     }
 }

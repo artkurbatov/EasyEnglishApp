@@ -37,8 +37,20 @@ struct HomeView: View {
                                         
                                     })
                                 
-                               SingleTestView( title: "Тест по теме \(module.category)")
+                                NavigationLink(
+                                    destination: TestView()
+                                        .onAppear(perform: {
+                                            model.beginTest(module.id)
+                                        }),
+                                    tag: module.id,
+                                    selection: $model.currentTestSelected,
+                                    label: {
+                                        SingleTestView( title: "Тест по теме \(module.category)")
+                                    })
                                 
+//                                NavigationLink(destination: EmptyView()){
+//                                    EmptyView()
+//                                }
                             }
                         }
                         

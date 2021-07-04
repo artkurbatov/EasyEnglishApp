@@ -17,10 +17,13 @@ class ContentModel: ObservableObject {
     @Published var currentLesson: Lesson?
     var currentLessonIndex = 0
 
-    @Published var currentTest: Test?
-    var currentTestIndex = 0
-    
+    @Published var currentQuestion: Question?
+    var currentQuestionIndex = 0
+        
     @Published var currentContentSelected: Int?
+    @Published var currentTestSelected: Int?
+    
+    var lessonDescription = 1
     
     init() {
         getLessonData()
@@ -78,5 +81,16 @@ class ContentModel: ObservableObject {
     func hasNextLesson() -> Bool{
 
         return currentLessonIndex + 1 < currentModule!.content.lessons.count
+    }
+    
+    func beginTest(_ moduleId: Int) {
+        
+        beginModule(moduleId)
+        currentQuestionIndex = 0
+        
+        if currentModule?.test.questions.count ?? 0 > 0 {
+            currentQuestion = currentModule!.test.questions[currentQuestionIndex]
+            
+        }
     }
 }
