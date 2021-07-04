@@ -11,7 +11,7 @@ struct SingleModuleView: View {
         
     var image: String
     var title: String
-    var discription: String
+    var description: String
     
     var body: some View {
         
@@ -38,7 +38,7 @@ struct SingleModuleView: View {
                                     .bold()
                                     
                                 
-                                Text(discription)
+                                Text(description)
                                     .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
                             }
                             .padding(.leading, 20)
@@ -54,8 +54,8 @@ struct SingleModuleView: View {
     }
 }
 
-struct ModulesListView_Previews: PreviewProvider {
+struct SingleModuleView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleModuleView(image: "timer", title: "Hi", discription: "ho")
+        SingleModuleView(image: "timer", title: "Hi", description: "ho")
     }
 }

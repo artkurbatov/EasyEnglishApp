@@ -14,25 +14,43 @@ struct ContentDetailView: View {
     var body: some View {
         
         VStack{
-            //ScrollView{
-              //  Text(lesson?.explanation ?? "")
+           
             ContentDescriptionView()
-            //}
             
             if model.hasNextLesson(){
-                
+
                 Button(action: {
                     model.nextLesson()
                 }, label: {
-                    
+
                     ZStack{
-                        
+
                         Rectangle()
-                            .frame(height: 48)
                             .foregroundColor(.green)
                             .cornerRadius(10)
                             .shadow(radius: 5)
+                            .frame(height: 48)
+                        
                     Text("Next Lesson: \(model.currentModule!.content.lessons[model.currentLessonIndex + 1].title)")
+                        .foregroundColor(.white)
+                        .bold()
+                    }
+            })
+            }
+            else{
+                Button(action: {
+                    model.currentContentSelected = nil
+                }, label: {
+
+                    ZStack{
+
+                        Rectangle()
+                            .foregroundColor(.green)
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
+                            .frame(height: 48)
+                        
+                    Text("Завершить")
                         .foregroundColor(.white)
                         .bold()
                     }
@@ -43,6 +61,7 @@ struct ContentDetailView: View {
         .navigationBarTitle(model.currentLesson?.title ?? "")
     }
 }
+
 
 struct ContentDetailView_Previews: PreviewProvider {
     static var previews: some View {
