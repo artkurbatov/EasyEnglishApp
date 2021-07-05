@@ -79,12 +79,12 @@
             "questions": [
                 {
                     "id": 0,
-                    "content": "They ___ to the office at eight o'clock every morning",
+                    "content": "Jerry promised to come to work in time. He is not here, and he even ___.",
                     "correctIndex": 0,
                     "answers": [
-                        "come",
-                        "comes",
-                        "came"
+                        "hasn't called",
+                        "isn't calling",
+                        "doesn't call"
                     ]
                 },
                 {
@@ -99,7 +99,7 @@
                 },
                 {
                     "id": 2,
-                    "content": "I ___ pizza when you arrived",
+                    "content": "I ___ pizza when you arrived.",
                     "correctIndex": 2,
                     "answers": [
                         "ate",
@@ -119,17 +119,17 @@
                 },
                 {
                     "id": 4,
-                    "content": "I will ___ to Tom by the time you come",
+                    "content": "They won't ___ all the problems by the end of the meeting, I am afraid.",
                     "correctIndex": 0,
                     "answers": [
-                        "have talked",
-                        "be talking",
-                        "talk"
+                        "have settled",
+                        "be settling",
+                        "settle"
                     ]
                 },
                 {
                     "id": 5,
-                    "content": "He said, he ___ to the dentist",
+                    "content": "He said, he ___ to the dentist.",
                     "correctIndex": 2,
                     "answers": [
                         "will go",
@@ -139,7 +139,7 @@
                 },
                 {
                     "id": 6,
-                    "content": "They ___ their sister before she went to Paris",
+                    "content": "They ___ their sister before she went to Paris.",
                     "correctIndex": 1,
                     "answers": [
                         "will visit",
@@ -159,37 +159,37 @@
                 },
                 {
                     "id": 8,
-                    "content": "___ you ___ here for two hours?",
+                    "content": "When Mary came back, she looked very red from the sun. She ___ in the sun too long.",
                     "correctIndex": 0,
                     "answers": [
-                        "Have/been waiting",
-                        "Had/been waiting",
-                        "Were/waiting"
+                        "had been lying",
+                        "was lying",
+                        "had lain"
                     ]
                 },
                 {
                     "id": 9,
-                    "content": "I ___ a letter for 2 hours when he came",
+                    "content": "Jake is a good footballer. Do you know since when ___ football?",
                     "correctIndex": 2,
                     "answers": [
-                        "was writing",
-                        "will be writing",
-                        "had been writing"
+                        "is he playing",
+                        "has he been playing",
+                        "he has been playing"
                     ]
                 },
                 {
                     "id": 10,
-                    "content": "My mom ___ dinner by the time I came home",
+                    "content": "He ___ ill for three days, so his mother wanted to bring him to a doctor, but he didn't want to go.",
                     "correctIndex": 1,
                     "answers": [
-                        "will have cooked",
-                        "had cooked",
-                        "cooked"
+                        "had felt",
+                        "had been feeling",
+                        "was feeling"
                     ]
                 },
                 {
                     "id": 11,
-                    "content": "The boys ___ chess when their mother came home",
+                    "content": "The boys ___ chess when their mother came home.",
                     "correctIndex": 0,
                     "answers": [
                         "were playing",
@@ -199,32 +199,32 @@
                 },
                 {
                     "id": 12,
-                    "content": "I will ___ the exam for two hours by the time you come home",
+                    "content": "I will be back soon. I hope you will ___ your translation by the time I come.",
                     "correctIndex": 1,
                     "answers": [
-                        "be taking",
-                        "have been taking",
-                        "take"
+                        "have been finishing",
+                        "have finished",
+                        "be finishing"
                     ]
                 },
                 {
                     "id": 13,
-                    "content": "He ___ in bed tomorrow. He is sick",
+                    "content": "By the first of December this year I will ___ here for fifteen years already.",
                     "correctIndex": 2,
                     "answers": [
-                        "stays",
-                        "stayed",
-                        "will stay"
+                        "have worked",
+                        "be working",
+                        "have been working"
                     ]
                 },
                 {
                     "id": 14,
-                    "content": "What ___ Tim ___ on Sunday evening?",
+                    "content": "While I ___ the dishes last night, I dropped a plate and broke it.",
                     "correctIndex": 0,
                     "answers": [
-                        "is/doing",
-                        "does/doing",
-                        "do/do"
+                        "was washing",
+                        "had been washing",
+                        "had washed"
                     ]
                 }
             ]
@@ -250,7 +250,7 @@
             "questions": [
                 {
                     "id": 0,
-                    "content": "Not much ___ about the accident since that time",
+                    "content": "Not much ___ about the accident since that time.",
                     "correctIndex": 2,
                     "answers": [
                         "said",
@@ -260,7 +260,7 @@
                 },
                 {
                     "id": 1,
-                    "content": "A cinema is a place where films ___",
+                    "content": "A cinema is a place where films ___.",
                     "correctIndex": 0,
                     "answers": [
                         "are shown",
@@ -270,7 +270,7 @@
                 },
                 {
                     "id": 2,
-                    "content": "While we were on holiday, our camera ___ from our hotel room",
+                    "content": "While we were on holiday, our camera ___ from our hotel room.",
                     "correctIndex": 2,
                     "answers": [
                         "has been stolen",
@@ -280,7 +280,7 @@
                 },
                 {
                     "id": 3,
-                    "content": "The decision ___ until the next meeting",
+                    "content": "The decision ___ until the next meeting.",
                     "correctIndex": 1,
                     "answers": [
                         "will not made",
@@ -290,12 +290,62 @@
                 },
                 {
                     "id": 4,
-                    "content": "Jim ___ his key",
+                    "content": "Jim ___ his key.",
                     "correctIndex": 0,
                     "answers": [
                         "has lost",
                         "has been lost",
                         "was lost"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "content": "The room ___ later.",
+                    "correctIndex": 2,
+                    "answers": [
+                        "has been cleaned",
+                        "will clean",
+                        "will be cleaned"
+                    ]
+                },
+                {
+                    "id": 6,
+                    "content": "When the manager arrived, the problem ___.",
+                    "correctIndex": 0,
+                    "answers": [
+                        "had already been solved",
+                        "had solved",
+                        "had already solved"
+                    ]
+                },
+                {
+                    "id": 7,
+                    "content": "A new book ___ by that company next year.",
+                    "correctIndex": 1,
+                    "answers": [
+                        "is publishing",
+                        "will be published",
+                        "will publish"
+                    ]
+                },
+                {
+                    "id": 8,
+                    "content": "The five great lakes of the world ___ in Michigan.",
+                    "correctIndex": 2,
+                    "answers": [
+                        "can found",
+                        "can find",
+                        "can be found"
+                    ]
+                },
+                {
+                    "id": 9,
+                    "content": "A prize ___ to whoever solves this equation.",
+                    "correctIndex": 0,
+                    "answers": [
+                        "will be given",
+                        "will be giving",
+                        "gives"
                     ]
                 }
             ]
@@ -350,25 +400,45 @@
                     ]
                 },
                 {
-                    "id": 0,
-                    "content": "Выберите правильный перевод предложения:\nЧто случилось с твоим другом?",
+                    "id": 1,
+                    "content": "The moon goes round the earth, ___ it?",
                     "correctIndex": 0,
                     "answers": [
-                        "What happened to your friend?",
-                        "do",
-                        ""
+                        "doesn't",
+                        "isn't",
+                        "didn't"
                     ]
                 },
                 {
-                    "id": 0,
-                    "content": "What ___ your mother do?",
-                    "correctIndex": 0,
+                    "id": 2,
+                    "content": "___ you know him?",
+                    "correctIndex": 2,
                     "answers": [
-                        "does",
-                        "do",
-                        ""
+                        "Does",
+                        "Is",
+                        "Do"
                     ]
                 },
+                {
+                    "id": 3,
+                    "content": "Will they buy a house ___ rent somewhere?",
+                    "correctIndex": 1,
+                    "answers": [
+                        "with",
+                        "or",
+                        "and"
+                    ]
+                },
+                {
+                    "id": 4,
+                    "content": "___ doesn’t like pizza?",
+                    "correctIndex": 0,
+                    "answers": [
+                        "Who",
+                        "When",
+                        "Where"
+                    ]
+                }
             ]
         }
     }
