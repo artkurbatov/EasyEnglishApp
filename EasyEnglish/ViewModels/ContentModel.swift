@@ -22,7 +22,7 @@ class ContentModel: ObservableObject {
         
     @Published var currentContentSelected: Int?
     @Published var currentTestSelected: Int?
-    
+        
     var lessonDescription = 1
     
     init() {
@@ -45,6 +45,7 @@ class ContentModel: ObservableObject {
     }
     
     func beginModule(_ moduleId: Int){
+        
         for index in 0..<modules.count {
             if modules[index].id == moduleId{
                 currentModuleIndex = index
@@ -91,6 +92,19 @@ class ContentModel: ObservableObject {
         if currentModule?.test.questions.count ?? 0 > 0 {
             currentQuestion = currentModule!.test.questions[currentQuestionIndex]
             
+        }
+    }
+    
+    func nextQuestion() {
+        
+        currentQuestionIndex += 1
+        
+        if currentQuestionIndex < currentModule!.test.questions.count {
+            currentQuestion = currentModule!.test.questions[currentQuestionIndex]
+        }
+        else {
+            currentQuestionIndex = 0
+            currentQuestion = nil
         }
     }
 }

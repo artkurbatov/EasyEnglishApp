@@ -79,13 +79,152 @@
             "questions": [
                 {
                     "id": 0,
-                    "content": "Во",
+                    "content": "They ___ to the office at eight o'clock every morning",
+                    "correctIndex": 0,
+                    "answers": [
+                        "come",
+                        "comes",
+                        "came"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "content": "___ you ever ___ to New York?",
+                    "correctIndex": 2,
+                    "answers": [
+                        "Has/been",
+                        "Were/-",
+                        "Have/been"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "content": "I ___ pizza when you arrived",
+                    "correctIndex": 2,
+                    "answers": [
+                        "ate",
+                        "am eating",
+                        "was eating"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "content": "His train ___ at 11:45.",
                     "correctIndex": 1,
                     "answers": [
-                        "1",
-                        "2",
-                        "3",
-                        "4"
+                        "arriving",
+                        "arrives",
+                        "arrive"
+                    ]
+                },
+                {
+                    "id": 4,
+                    "content": "I will ___ to Tom by the time you come",
+                    "correctIndex": 0,
+                    "answers": [
+                        "have talked",
+                        "be talking",
+                        "talk"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "content": "He said, he ___ to the dentist",
+                    "correctIndex": 2,
+                    "answers": [
+                        "will go",
+                        "goes",
+                        "would go"
+                    ]
+                },
+                {
+                    "id": 6,
+                    "content": "They ___ their sister before she went to Paris",
+                    "correctIndex": 1,
+                    "answers": [
+                        "will visit",
+                        "had visited",
+                        "visited"
+                    ]
+                },
+                {
+                    "id": 7,
+                    "content": "___ you ___ English tomorrow at 3 o'clock?",
+                    "correctIndex": 2,
+                    "answers": [
+                        "Do/learn",
+                        "Will/learn",
+                        "Will/be learning"
+                    ]
+                },
+                {
+                    "id": 8,
+                    "content": "___ you ___ here for two hours?",
+                    "correctIndex": 0,
+                    "answers": [
+                        "Have/been waiting",
+                        "Had/been waiting",
+                        "Were/waiting"
+                    ]
+                },
+                {
+                    "id": 9,
+                    "content": "I ___ a letter for 2 hours when he came",
+                    "correctIndex": 2,
+                    "answers": [
+                        "was writing",
+                        "will be writing",
+                        "had been writing"
+                    ]
+                },
+                {
+                    "id": 10,
+                    "content": "My mom ___ dinner by the time I came home",
+                    "correctIndex": 1,
+                    "answers": [
+                        "will have cooked",
+                        "had cooked",
+                        "cooked"
+                    ]
+                },
+                {
+                    "id": 11,
+                    "content": "The boys ___ chess when their mother came home",
+                    "correctIndex": 0,
+                    "answers": [
+                        "were playing",
+                        "played",
+                        "will be playing"
+                    ]
+                },
+                {
+                    "id": 12,
+                    "content": "I will ___ the exam for two hours by the time you come home",
+                    "correctIndex": 1,
+                    "answers": [
+                        "be taking",
+                        "have been taking",
+                        "take"
+                    ]
+                },
+                {
+                    "id": 13,
+                    "content": "He ___ in bed tomorrow. He is sick",
+                    "correctIndex": 2,
+                    "answers": [
+                        "stays",
+                        "stayed",
+                        "will stay"
+                    ]
+                },
+                {
+                    "id": 14,
+                    "content": "What ___ Tim ___ on Sunday evening?",
+                    "correctIndex": 0,
+                    "answers": [
+                        "is/doing",
+                        "does/doing",
+                        "do/do"
                     ]
                 }
             ]
@@ -111,18 +250,58 @@
             "questions": [
                 {
                     "id": 0,
-                    "content": "пр",
+                    "content": "Not much ___ about the accident since that time",
                     "correctIndex": 2,
                     "answers": [
-                        "",
-                        "",
-                        "",
-                        ""
+                        "said",
+                        "has said",
+                        "has been said"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "content": "A cinema is a place where films ___",
+                    "correctIndex": 0,
+                    "answers": [
+                        "are shown",
+                        "show",
+                        "have been shown"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "content": "While we were on holiday, our camera ___ from our hotel room",
+                    "correctIndex": 2,
+                    "answers": [
+                        "has been stolen",
+                        "had been stolen",
+                        "was stolen"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "content": "The decision ___ until the next meeting",
+                    "correctIndex": 1,
+                    "answers": [
+                        "will not made",
+                        "will not be made",
+                        "has not been made"
+                    ]
+                },
+                {
+                    "id": 4,
+                    "content": "Jim ___ his key",
+                    "correctIndex": 0,
+                    "answers": [
+                        "has lost",
+                        "has been lost",
+                        "was lost"
                     ]
                 }
             ]
         }
-    },{
+    },
+    {
         "id": 3,
         "category": "Questions",
         "content": {
@@ -162,15 +341,34 @@
             "questions": [
                 {
                     "id": 0,
-                    "content": "ос",
-                    "correctIndex": 3,
+                    "content": "What ___ your mother do?",
+                    "correctIndex": 0,
                     "answers": [
-                        "",
-                        "",
-                        "",
+                        "does",
+                        "do",
+                        "is"
+                    ]
+                },
+                {
+                    "id": 0,
+                    "content": "Выберите правильный перевод предложения:\nЧто случилось с твоим другом?",
+                    "correctIndex": 0,
+                    "answers": [
+                        "What happened to your friend?",
+                        "do",
                         ""
                     ]
-                }
+                },
+                {
+                    "id": 0,
+                    "content": "What ___ your mother do?",
+                    "correctIndex": 0,
+                    "answers": [
+                        "does",
+                        "do",
+                        ""
+                    ]
+                },
             ]
         }
     }

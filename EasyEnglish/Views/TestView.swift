@@ -88,11 +88,20 @@ struct TestView: View {
                 }
                 
                 Button(action: {
+                    
+                    if submitted == true {
+                        
+                        model.nextQuestion()
+                        submitted = false
+                        selectedAnswerIndex = nil
+                    }
+                    else {
+                    
                     submitted = true
                     if selectedAnswerIndex == model.currentQuestion!.correctIndex{
                         result += 1
                     }
-                    
+                    }
                 }, label: {
                     ZStack{
                     Rectangle()
@@ -101,7 +110,7 @@ struct TestView: View {
                         .shadow(radius: 5)
                         .frame(height: 48)
                         
-                        Text("Ответить")
+                        Text(buttonText)
                             .bold()
                             .foregroundColor(.white)
                             
@@ -117,8 +126,25 @@ struct TestView: View {
             ProgressView()
         }
     }
+    
+    var buttonText: String {
+    
+        if submitted == true {
+            if model.currentQuestionIndex + 1 == model.currentModule?.test.questions.count  {
+                return "Завершить"
+            }
+            else {
+                return "Следующий вопрос"
+            }
+        }
+        else{
+            return "Ответить"
+        }
 }
 
+}
+
+   
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
         TestView().environmentObject(ContentModel())
