@@ -14,12 +14,14 @@ struct TestView: View {
     @State var selectedAnswerIndex: Int?
     @State var result = 0
     @State var submitted = false
+    @State var showResults = false
     
     var body: some View {
         
-        if model.currentQuestion != nil {
+        if model.currentQuestion != nil && showResults == false {
             
             VStack(alignment: .leading){
+                
                 Text("Вопрос \(model.currentQuestionIndex + 1) из \(model.currentModule?.test.questions.count ?? 0)\n")
                     .padding(.leading, 20)
                     .padding(.top, 10)
@@ -27,100 +29,102 @@ struct TestView: View {
                 Text(model.currentQuestion!.content)
                     .padding(.horizontal, 20)
                 
-                ContentDescriptionView()
+                Spacer()
                 
-                ScrollView{
-                    VStack{
-                        ForEach(0..<model.currentQuestion!.answers.count, id: \.self) { index in
-                            
-                            Button(action: {
-                                selectedAnswerIndex = index
-                            }, label: {
-                                ZStack{
-                                    if submitted == false{
-                                Rectangle()
-                                    .foregroundColor(index == selectedAnswerIndex ? .gray : .white)
-                                    .cornerRadius(10)
-                                    .shadow(radius: 5)
-                                    .frame(height: 48)
+                VStack{
+                    ForEach(0..<model.currentQuestion!.answers.count, id: \.self) { index in
+                        
+                        Button(action: {
+                            selectedAnswerIndex = index
+                        }, label: {
+                            ZStack{
+                                if submitted == false{
+                                    Rectangle()
+                                        .foregroundColor(index == selectedAnswerIndex ? .gray : .white)
+                                        .cornerRadius(10)
+                                        .shadow(radius: 5)
+                                        .frame(height: 48)
+                                }
+                                else{
+                                    if index == selectedAnswerIndex && index == model.currentQuestion!.correctIndex{
+                                        Rectangle()
+                                            .foregroundColor(.green)
+                                            .cornerRadius(10)
+                                            .shadow(radius: 5)
+                                            .frame(height: 48)
+                                    }
+                                    else if index == selectedAnswerIndex && index != model.currentQuestion!.correctIndex{
+                                        Rectangle()
+                                            .foregroundColor(.red)
+                                            .cornerRadius(10)
+                                            .shadow(radius: 5)
+                                            .frame(height: 48)
+                                    }
+                                    else if index == model.currentQuestion!.correctIndex{
+                                        Rectangle()
+                                            .foregroundColor(.green)
+                                            .cornerRadius(10)
+                                            .shadow(radius: 5)
+                                            .frame(height: 48)
                                     }
                                     else{
-                                        if index == selectedAnswerIndex && index == model.currentQuestion!.correctIndex{
-                                            Rectangle()
-                                                .foregroundColor(.green)
-                                                .cornerRadius(10)
-                                                .shadow(radius: 5)
-                                                .frame(height: 48)
-                                        }
-                                        else if index == selectedAnswerIndex && index != model.currentQuestion!.correctIndex{
-                                            Rectangle()
-                                                .foregroundColor(.red)
-                                                .cornerRadius(10)
-                                                .shadow(radius: 5)
-                                                .frame(height: 48)
-                                        }
-                                        else if index == model.currentQuestion!.correctIndex{
-                                            Rectangle()
-                                                .foregroundColor(.green)
-                                                .cornerRadius(10)
-                                                .shadow(radius: 5)
-                                                .frame(height: 48)
-                                        }
-                                        else{
-                                            Rectangle()
-                                                .foregroundColor(.white)
-                                                .cornerRadius(10)
-                                                .shadow(radius: 5)
-                                                .frame(height: 48)
-                                        }
+                                        Rectangle()
+                                            .foregroundColor(.white)
+                                            .cornerRadius(10)
+                                            .shadow(radius: 5)
+                                            .frame(height: 48)
                                     }
-
-                                    Text(model.currentQuestion!.answers[index])
+                                }
+                                
+                                Text(model.currentQuestion!.answers[index])
                             }
-                            })
-                            .disabled(submitted)
-                            
-                           
-                        }
+                        })
+                        .disabled(submitted)
                     }
-                    .accentColor(.black)
-                    .padding()
                 }
+                .accentColor(.black)
+                .padding()
+                
+                Spacer()
                 
                 Button(action: {
-                    
                     if submitted == true {
-                        
-                        model.nextQuestion()
-                        submitted = false
-                        selectedAnswerIndex = nil
+                        if model.currentQuestionIndex + 1 == model.currentModule?.test.questions.count  {
+                            showResults = true
+                        }
+                        else {
+                            model.nextQuestion()
+                            submitted = false
+                            selectedAnswerIndex = nil
+                        }
                     }
                     else {
-                    
-                    submitted = true
-                    if selectedAnswerIndex == model.currentQuestion!.correctIndex{
-                        result += 1
-                    }
+                        submitted = true
+                        if selectedAnswerIndex == model.currentQuestion!.correctIndex{
+                            result += 1
+                        }
                     }
                 }, label: {
                     ZStack{
-                    Rectangle()
-                        .foregroundColor(.green)
-                        .cornerRadius(10)
-                        .shadow(radius: 5)
-                        .frame(height: 48)
+                        Rectangle()
+                            .foregroundColor(.green)
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
+                            .frame(height: 48)
                         
                         Text(buttonText)
                             .bold()
                             .foregroundColor(.white)
-                            
-                }
+                        
+                    }
                     .padding()
                 })
                 .disabled(selectedAnswerIndex == nil)
-                //Spacer()
             }
             .navigationBarTitle("Тест \(model.currentModule?.category ?? "")")
+        }
+        else if showResults == true {
+            TestResultView(result: result)
         }
         else {
             ProgressView()
@@ -128,7 +132,7 @@ struct TestView: View {
     }
     
     var buttonText: String {
-    
+        
         if submitted == true {
             if model.currentQuestionIndex + 1 == model.currentModule?.test.questions.count  {
                 return "Завершить"
@@ -140,11 +144,11 @@ struct TestView: View {
         else{
             return "Ответить"
         }
+    }
+    
 }
 
-}
 
-   
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
         TestView().environmentObject(ContentModel())

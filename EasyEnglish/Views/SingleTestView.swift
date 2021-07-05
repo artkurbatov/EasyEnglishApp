@@ -13,24 +13,21 @@ struct SingleTestView: View {
     
     var body: some View {
         
-            LazyVStack {
+        LazyVStack {
+            ZStack{
+                Rectangle()
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 5)
+                    .aspectRatio(CGSize(width: 335, height: 50), contentMode: .fit)
                 
-                ZStack{
-                        
-                        Rectangle()
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
-                            .aspectRatio(CGSize(width: 335, height: 50), contentMode: .fit)
-                        
-                                Text(title)
-                                    .foregroundColor(.black)
-                                    .font(.title2)
-                                    .bold()
-                    }
-               
-                .padding(.top, 7)
-                .padding(.horizontal, 10)
+                Text(title)
+                    .foregroundColor(.black)
+                    .font(.title2)
+                    .bold()
+            }
+            .padding(.top, 7)
+            .padding(.horizontal, 10)
         }
     }
 }

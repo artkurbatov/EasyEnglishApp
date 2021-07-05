@@ -10,31 +10,26 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject var model: ContentModel
-        
+    
     var body: some View {
         
         NavigationView {
             VStack (alignment: .leading) {
                 ScrollView {
-                    
                     LazyVStack {
-                        
                         ForEach(model.modules) { module in
-                            
+                
                             VStack {
-                                
                                 NavigationLink(
                                     destination:
                                         ContentView()
-                                            .onAppear(perform: {
-                                                model.beginModule(module.id)
-                                            }),
+                                        .onAppear(perform: {
+                                            model.beginModule(module.id)
+                                        }),
                                     tag: module.id,
                                     selection: $model.currentContentSelected,
                                     label: {
-                                        
                                         SingleModuleView(image: module.content.image, title: module.category, description: module.content.description)
-                                        
                                     })
                                 
                                 NavigationLink(
@@ -47,20 +42,24 @@ struct HomeView: View {
                                     label: {
                                         SingleTestView( title: "Тест по теме \(module.category)")
                                     })
-                                
-//                                NavigationLink(destination: EmptyView()){
-//                                    EmptyView()
-//                                }
                             }
                         }
-                        
                     }
                     .accentColor(.black)
                     .padding()
-                    
                 }
             }
             .navigationTitle("C чего начнём?")
+            .onChange(of: model.currentContentSelected) { value in
+                if value == nil {
+                    model.currentModule = nil
+                }
+            }
+            .onChange(of: model.currentTestSelected) { value in
+                if value == nil {
+                    model.currentModule = nil
+                }
+            }
         }
     }
 }

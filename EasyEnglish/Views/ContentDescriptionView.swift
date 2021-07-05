@@ -9,24 +9,22 @@ import SwiftUI
 
 struct ContentDescriptionView: UIViewRepresentable {
     
-        @EnvironmentObject var model: ContentModel
+    @EnvironmentObject var model: ContentModel
+    
+    func makeUIView(context: Context) -> UITextView {
         
-        func makeUIView(context: Context) -> UITextView {
-            
-            let textView = UITextView()
-            textView.isEditable = false
-            
-            return textView
-        }
+        let textView = UITextView()
+        textView.isEditable = false
         
-        func updateUIView(_ textView: UITextView, context: Context) {
-            
-            textView.text = model.currentLesson?.explanation
-            
-            textView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 1, height: 1), animated: false)
-        }
-        
+        return textView
     }
+    
+    func updateUIView(_ textView: UITextView, context: Context) {
+        
+        textView.text = model.currentLesson?.explanation
+        textView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 1, height: 1), animated: false)
+    }
+}
 
 struct ContentDescriptionView_Previews: PreviewProvider {
     static var previews: some View {
