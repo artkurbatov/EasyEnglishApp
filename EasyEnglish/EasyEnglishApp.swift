@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct EasyEnglishApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            HomeView().environmentObject(ContentModel())
+            LaunchView()
+                .environmentObject(ContentModel())
+               
         }
     }
 }

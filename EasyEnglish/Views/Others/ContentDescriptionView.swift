@@ -14,6 +14,7 @@ struct ContentDescriptionView: UIViewRepresentable {
     func makeUIView(context: Context) -> UITextView {
         
         let textView = UITextView()
+        textView.font = UIFont.systemFont(ofSize: 17.0)
         textView.isEditable = false
         
         return textView

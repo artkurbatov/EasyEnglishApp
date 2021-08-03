@@ -13,6 +13,7 @@ struct TestView: View {
     
     @State var selectedAnswerIndex: Int?
     @State var result = 0
+    @State var wrong = 0
     @State var submitted = false
     @State var showResults = false
     
@@ -90,6 +91,8 @@ struct TestView: View {
                 Button(action: {
                     if submitted == true {
                         if model.currentQuestionIndex + 1 == model.currentModule?.test.questions.count  {
+                            
+                            model.nextQuestion()
                             showResults = true
                         }
                         else {
@@ -101,6 +104,7 @@ struct TestView: View {
                     else {
                         submitted = true
                         if selectedAnswerIndex == model.currentQuestion!.correctIndex{
+                            
                             result += 1
                         }
                     }
@@ -124,7 +128,7 @@ struct TestView: View {
             .navigationBarTitle("Тест \(model.currentModule?.category ?? "")")
         }
         else if showResults == true {
-            TestResultView(result: result)
+            TestResultView(correct: result)
         }
         else {
             ProgressView()

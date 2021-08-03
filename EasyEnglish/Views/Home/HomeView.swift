@@ -6,15 +6,19 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct HomeView: View {
     
     @EnvironmentObject var model: ContentModel
     
+    let user = UserService.shared.user
+    
     var body: some View {
         
         NavigationView {
             VStack (alignment: .leading) {
+
                 ScrollView {
                     LazyVStack {
                         ForEach(model.modules) { module in
@@ -47,9 +51,35 @@ struct HomeView: View {
                     }
                     .accentColor(.black)
                     .padding()
+                    
+                    HStack {
+                        Spacer()
+                                    Button(action: {
+                                        try! Auth.auth().signOut()
+                                        model.checkLogin()
+                                    }, label: {
+                                       
+                                        
+                                        ZStack {
+                                            Rectangle()
+                                                .foregroundColor(.white)
+                                                .frame(width: 100, height: 40)
+                                                .cornerRadius(30)
+                                                .shadow(radius: 5)
+                                            
+                                            Text("Выйти")
+                                                .bold()
+                                                .foregroundColor(.black)
+                                        }
+                                    })
+                        Spacer()
+                        
+                    }
+                    .padding(.bottom)
                 }
             }
-            .navigationTitle("C чего начнём?")
+            .navigationBarTitleDisplayMode(.automatic)
+            .navigationTitle("Easy English")
             .onChange(of: model.currentContentSelected) { value in
                 if value == nil {
                     model.currentModule = nil

@@ -14,8 +14,7 @@ struct SingleModuleView: View {
     var description: String
     
     var body: some View {
-        
-        LazyVStack {
+    
             ZStack {
                 
                 Rectangle()
@@ -48,7 +47,6 @@ struct SingleModuleView: View {
             .padding(.top, 7)
             .padding(.horizontal, 10)
         }
-    }
 }
 
 struct SingleModuleView_Previews: PreviewProvider {

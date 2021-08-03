@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseAuth
 
 class ContentModel: ObservableObject {
+    
+    @Published var loggedIn = false
     
     @Published var modules = [Module]()
     
@@ -23,13 +27,21 @@ class ContentModel: ObservableObject {
     @Published var currentContentSelected: Int?
     @Published var currentTestSelected: Int?
     
+    
     var lessonDescription = 1
     
     init() {
-        getLessonData()
     }
     
-    func getLessonData() {
+    func checkLogin() {
+        
+        loggedIn = Auth.auth().currentUser != nil ? true : false
+        
+        if UserService.shared.user.name == "" {
+        }
+    }
+
+    func getLocalData() {
         
         let url = Bundle.main.url(forResource: "data", withExtension: "json")
         do{
@@ -56,6 +68,8 @@ class ContentModel: ObservableObject {
     }
     
     func beginLesson(_ lessonIndex: Int){
+        
+        currentQuestionIndex = 0
         
         if lessonIndex < currentModule!.content.lessons.count{
             currentLessonIndex = lessonIndex
@@ -91,6 +105,7 @@ class ContentModel: ObservableObject {
         
         beginModule(moduleId)
         currentQuestionIndex = 0
+        currentLessonIndex = 0
         
         if currentModule?.test.questions.count ?? 0 > 0 {
             currentQuestion = currentModule!.test.questions[currentQuestionIndex]

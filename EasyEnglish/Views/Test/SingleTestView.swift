@@ -13,7 +13,6 @@ struct SingleTestView: View {
     
     var body: some View {
         
-        LazyVStack {
             ZStack{
                 Rectangle()
                     .foregroundColor(.white)
@@ -29,7 +28,6 @@ struct SingleTestView: View {
             .padding(.top, 7)
             .padding(.horizontal, 10)
         }
-    }
 }
 
 struct SingleTestView_Previews: PreviewProvider {

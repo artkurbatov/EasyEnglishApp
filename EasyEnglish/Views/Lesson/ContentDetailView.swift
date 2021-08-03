@@ -14,9 +14,9 @@ struct ContentDetailView: View {
     var body: some View {
         
         VStack{
-            
+
             ContentDescriptionView()
-            
+                    
             if model.hasNextLesson(){
                 Button(action: {
                     model.nextLesson()
@@ -29,7 +29,7 @@ struct ContentDetailView: View {
                             .shadow(radius: 5)
                             .frame(height: 48)
                         
-                        Text("Next Lesson: \(model.currentModule!.content.lessons[model.currentLessonIndex + 1].title)")
+                        Text("Далее: \(model.currentModule!.content.lessons[model.currentLessonIndex + 1].title)")
                             .foregroundColor(.white)
                             .bold()
                     }
@@ -37,6 +37,8 @@ struct ContentDetailView: View {
             }
             else{
                 Button(action: {
+                    
+                    model.nextLesson()
                     model.currentContentSelected = nil
                 }, label: {
                     ZStack{
@@ -63,6 +65,7 @@ struct ContentDetailView: View {
 struct ContentDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ContentDetailView()
+            .environmentObject(ContentModel())
         
     }
 }
