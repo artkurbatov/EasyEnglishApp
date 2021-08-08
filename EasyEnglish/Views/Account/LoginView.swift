@@ -23,10 +23,9 @@ struct LoginView: View {
             return "Войти"
         }
         else {
-           return "Зарегистрироваться"
+            return "Зарегистрироваться"
         }
     }
-  
     
     enum LoginMode {
         case login
@@ -58,25 +57,24 @@ struct LoginView: View {
             .padding(.bottom, 10)
             
             Group {
-            
+                
                 if login == LoginMode.createAccount {
                     
                     TextField("Имя", text: $name)
                 }
                 
-            TextField("Почта", text: $email)
+                TextField("Почта", text: $email)
                 
-            SecureField("Пароль", text: $password)
+                SecureField("Пароль", text: $password)
                 
                 if errorMessage != nil {
                     Text(errorMessage!)
                 }
-                
             }
             
             Button(action: {
                 if login == LoginMode.login {
-                   
+                    
                     Auth.auth().signIn(withEmail: email, password: password) { result, error in
                         
                         guard error == nil else {

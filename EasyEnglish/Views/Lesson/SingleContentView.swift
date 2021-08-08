@@ -38,6 +38,7 @@ struct SingleContentView: View {
                     .bold()
                 
                 VStack(alignment: .leading){
+                    
                     Text(lesson.title)
                         .bold()
                 }

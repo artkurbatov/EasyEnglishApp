@@ -13,7 +13,7 @@ struct LaunchView: View {
     @EnvironmentObject var model : ContentModel
     
     var body: some View {
-       
+        
         if model.loggedIn == false {
             LoginView()
                 .onAppear(perform: {
@@ -21,10 +21,10 @@ struct LaunchView: View {
                 })
         }
         else {
-                HomeView()
-                    .onAppear(perform: {
-                        model.getLocalData()
-                    })
+            HomeView()
+                .onAppear(perform: {
+                    model.getLocalData()
+                })
         }
     }
 }

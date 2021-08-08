@@ -111,6 +111,7 @@
 				B85145C7268394B30042CCE3 /* ViewModels */,
 				B85145C8268394C60042CCE3 /* Models */,
 				B85145C9268394F20042CCE3 /* Data */,
+				B803963D26AEC4E1003F0EEF /* UserService.swift */,
 				B83DC4C8268393BD001D1289 /* Assets.xcassets */,
 				B83DC4CD268393BD001D1289 /* Info.plist */,
 				B863CCBB26AD734700D8C006 /* GoogleService-Info.plist */,
@@ -135,7 +136,6 @@
 				B8C19A3126AD7A95001E36AE /* Account */,
 				B8C19A3326AD7AAE001E36AE /* Lesson */,
 				B8C19A3426AD7AB7001E36AE /* Test */,
-				B8C19A3526AD7AC4001E36AE /* Others */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				B834113E2684615C006EA13E /* data.json */,
-				B803963D26AEC4E1003F0EEF /* UserService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -188,6 +187,7 @@
 				B8EA72152690DB060095E138 /* ContentView.swift */,
 				B870AB5F269351740092975A /* SingleContentView.swift */,
 				B835873926919C9C00B6EA67 /* ContentDetailView.swift */,
+				B835873B2691A21E00B6EA67 /* ContentDescriptionView.swift */,
 			);
 			path = Lesson;
 			sourceTree = "<group>";
@@ -200,14 +200,6 @@
 				B8771FDB269214E400560104 /* SingleTestView.swift */,
 			);
 			path = Test;
-			sourceTree = "<group>";
-		};
-		B8C19A3526AD7AC4001E36AE /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				B835873B2691A21E00B6EA67 /* ContentDescriptionView.swift */,
-			);
-			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

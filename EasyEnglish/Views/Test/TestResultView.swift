@@ -23,7 +23,6 @@ struct TestResultView: View {
         return NSString(format:"%.0f", percent * 100) as String
     }
     
-    
     var body: some View {
         
         VStack {
@@ -47,43 +46,38 @@ struct TestResultView: View {
                             .frame(width: 65, height: 65)
                             .foregroundColor(.yellow)
                             .shadow(radius: 2)
-
-                    
-                    Text("\(num)%")
-                        .bold()
+                        
+                        Text("\(num)%")
+                            .bold()
                     }
+                    
                     Divider().background(Color.black)
                     
-                  Spacer()
+                    Spacer()
                     
                     HStack(spacing: 100) {
-            
+                        
                         VStack{
-                        Text("Верно:")
-                            .padding(.bottom, 5)
-                        Text("\(correct)")
-                            .foregroundColor(.green)
+                            Text("Верно:")
+                                .padding(.bottom, 5)
+                            Text("\(correct)")
+                                .foregroundColor(.green)
                         }
                         .font(.title3)
                         
                         VStack{
-                        Text("Неверно:")
-                            .padding(.bottom, 5)
+                            Text("Неверно:")
+                                .padding(.bottom, 5)
                             Text("\((model.currentModule?.test.questions.count ?? 0) - correct)")
                                 .foregroundColor(.red)
                         }
                         .font(.title3)
                     }
-                    
                     Spacer()
-                    }
-                    
+                }
             }
             .frame(width: 350, height: 200)
             
-            
-            
-    
             Spacer()
             
             Button {
@@ -106,6 +100,7 @@ struct TestResultView: View {
         .padding(.top, 50)
     }
 }
+
 
 struct TestResultView_Previews: PreviewProvider {
     static var previews: some View {

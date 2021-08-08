@@ -149,7 +149,6 @@ struct TestView: View {
             return "Ответить"
         }
     }
-    
 }
 
 

@@ -14,9 +14,9 @@ struct ContentDetailView: View {
     var body: some View {
         
         VStack{
-
+            
             ContentDescriptionView()
-                    
+            
             if model.hasNextLesson(){
                 Button(action: {
                     model.nextLesson()

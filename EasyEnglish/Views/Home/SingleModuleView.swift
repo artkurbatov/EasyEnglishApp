@@ -14,39 +14,39 @@ struct SingleModuleView: View {
     var description: String
     
     var body: some View {
-    
-            ZStack {
+        
+        ZStack {
+            
+            Rectangle()
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .shadow(radius: 5)
+                .aspectRatio(CGSize(width: 335, height: 100), contentMode: .fit)
+            
+            HStack {
                 
-                Rectangle()
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .shadow(radius: 5)
-                    .aspectRatio(CGSize(width: 335, height: 100), contentMode: .fit)
+                Image(image)
+                    .resizable()
+                    .frame(width: 64, height: 64)
                 
-                HStack {
+                VStack (alignment: .leading, spacing: 10) {
                     
-                    Image(image)
-                        .resizable()
-                        .frame(width: 64, height: 64)
+                    Text(title)
+                        .font(.title2)
+                        .bold()
                     
-                    VStack (alignment: .leading, spacing: 10) {
-                        
-                        Text(title)
-                            .font(.title2)
-                            .bold()
-                        
-                        Text(description)
-                            .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
-                    }
-                    .padding(.leading, 20)
-                    
-                    Spacer()
+                    Text(description)
+                        .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
                 }
-                .padding(.horizontal, 20)
+                .padding(.leading, 20)
+                
+                Spacer()
             }
-            .padding(.top, 7)
-            .padding(.horizontal, 10)
+            .padding(.horizontal, 20)
         }
+        .padding(.top, 7)
+        .padding(.horizontal, 10)
+    }
 }
 
 struct SingleModuleView_Previews: PreviewProvider {
