@@ -45,7 +45,3 @@ struct Question: Decodable, Identifiable {
     var correctIndex: Int
     var answers: [String]
 }
-
-class User {
-    var name: String = ""
-}

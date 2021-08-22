@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B803963E26AEC4E1003F0EEF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803963D26AEC4E1003F0EEF /* UserService.swift */; };
 		B82B4C11268396A300D7AAC7 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82B4C10268396A300D7AAC7 /* ContentModel.swift */; };
 		B834113F2684615C006EA13E /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B834113E2684615C006EA13E /* data.json */; };
 		B8341141268462C4006EA13E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8341140268462C4006EA13E /* Models.swift */; };
@@ -32,7 +31,6 @@
 /* Begin PBXFileReference section */
 		45B16DAA4AB704CC52565401 /* Pods-EasyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		70335C2619457DDD9AFF1360 /* Pods-EasyEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.release.xcconfig"; sourceTree = "<group>"; };
-		B803963D26AEC4E1003F0EEF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B82B4C10268396A300D7AAC7 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		B834113E2684615C006EA13E /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		B8341140268462C4006EA13E /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				B85145C7268394B30042CCE3 /* ViewModels */,
 				B85145C8268394C60042CCE3 /* Models */,
 				B85145C9268394F20042CCE3 /* Data */,
-				B803963D26AEC4E1003F0EEF /* UserService.swift */,
 				B83DC4C8268393BD001D1289 /* Assets.xcassets */,
 				B83DC4CD268393BD001D1289 /* Info.plist */,
 				B863CCBB26AD734700D8C006 /* GoogleService-Info.plist */,
@@ -133,7 +130,7 @@
 			children = (
 				B8C19A3A26AD7C20001E36AE /* LaunchView.swift */,
 				B8C19A3226AD7AA7001E36AE /* Home */,
-				B8C19A3126AD7A95001E36AE /* Account */,
+				B8C19A3126AD7A95001E36AE /* Login */,
 				B8C19A3326AD7AAE001E36AE /* Lesson */,
 				B8C19A3426AD7AB7001E36AE /* Test */,
 			);
@@ -164,12 +161,12 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		B8C19A3126AD7A95001E36AE /* Account */ = {
+		B8C19A3126AD7A95001E36AE /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				B8C19A3626AD7BD0001E36AE /* LoginView.swift */,
 			);
-			path = Account;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B8C19A3226AD7AA7001E36AE /* Home */ = {
@@ -329,7 +326,6 @@
 				B835873C2691A21E00B6EA67 /* ContentDescriptionView.swift in Sources */,
 				B83DC4C7268393BD001D1289 /* HomeView.swift in Sources */,
 				B8C19A3726AD7BD0001E36AE /* LoginView.swift in Sources */,
-				B803963E26AEC4E1003F0EEF /* UserService.swift in Sources */,
 				B83DC4C5268393BD001D1289 /* EasyEnglishApp.swift in Sources */,
 				B870AB5E269337620092975A /* TestResultView.swift in Sources */,
 			);

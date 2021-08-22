@@ -12,8 +12,6 @@ struct HomeView: View {
     
     @EnvironmentObject var model: ContentModel
     
-    let user = UserService.shared.user
-    
     var body: some View {
         
         NavigationView {

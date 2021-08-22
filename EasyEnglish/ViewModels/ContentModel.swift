@@ -36,9 +36,6 @@ class ContentModel: ObservableObject {
     func checkLogin() {
         
         loggedIn = Auth.auth().currentUser != nil ? true : false
-        
-        if UserService.shared.user.name == "" {
-        }
     }
 
     func getLocalData() {
@@ -53,7 +50,6 @@ class ContentModel: ObservableObject {
         catch{
             print(error)
         }
-        
     }
     
     func beginModule(_ moduleId: Int){

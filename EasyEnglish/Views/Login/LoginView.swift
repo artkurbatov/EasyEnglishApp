@@ -12,7 +12,7 @@ import Firebase
 struct LoginView: View {
     
     @EnvironmentObject var model: ContentModel
-    @State var login = LoginMode.login
+    @State var login = LoginMode.createAccount
     @State var email = ""
     @State var password = ""
     @State var name = ""
@@ -49,7 +49,7 @@ struct LoginView: View {
             
             Spacer()
             
-            Picker(selection: $login, label: Text("Picker"), content: {
+            Picker(selection: $login, label: Text(""), content: {
                 Text("Вход").tag(LoginMode.login)
                 Text("Регистрация").tag(LoginMode.createAccount)
             })
@@ -91,7 +91,7 @@ struct LoginView: View {
                     Auth.auth().createUser(withEmail: email, password: password) { result, error in
                         
                         guard error == nil else {
-                            self.errorMessage = error!.localizedDescription
+                            errorMessage = error!.localizedDescription
                             return
                         }
                         
@@ -99,12 +99,9 @@ struct LoginView: View {
                         
                         let firebaseUser = Auth.auth().currentUser
                         let db = Firestore.firestore()
-                        let ref = db.collection("users").document(firebaseUser!.uid)
+                        let users = db.collection("users").document(firebaseUser!.uid)
                         
-                        ref.setData(["name": name], merge: true)
-                        
-                        let user = UserService.shared.user
-                        user.name = name
+                        users.setData(["name": name], merge: true)
                         
                         self.model.checkLogin()
                     }
@@ -112,7 +109,7 @@ struct LoginView: View {
             }, label: {
                 ZStack {
                     Rectangle()
-                        .foregroundColor(.blue)
+                        .foregroundColor(.green)
                         .frame(height: 40)
                         .cornerRadius(10)
                     
