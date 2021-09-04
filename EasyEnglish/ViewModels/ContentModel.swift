@@ -119,4 +119,13 @@ class ContentModel: ObservableObject {
             currentQuestionIndex = 0
         }
     }
+    
+    func getPercent(correct: Int, totalCount: Int?) -> Float {
+     
+        guard totalCount != nil else {
+            return 0.0
+        }
+        
+        return Float(correct/totalCount!)
+    }
 }

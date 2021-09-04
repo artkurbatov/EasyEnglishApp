@@ -29,7 +29,7 @@ struct SingleContentView: View {
             Rectangle()
                 .foregroundColor(.white)
                 .cornerRadius(10)
-                .shadow(radius: 5)
+                .shadow(radius: 1)
                 .frame(height: 66)
             
             HStack{

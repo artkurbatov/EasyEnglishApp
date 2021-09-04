@@ -17,6 +17,13 @@ struct TestView: View {
     @State var submitted = false
     @State var showResults = false
     
+    var progress: Float {
+        guard model.currentModule != nil else {
+            return 0
+        }
+        return Float(model.currentQuestionIndex)/Float(model.currentModule?.test.questions.count ?? 1)
+    }
+    
     var body: some View {
         
         if model.currentQuestion != nil && showResults == false {
@@ -43,7 +50,7 @@ struct TestView: View {
                                     Rectangle()
                                         .foregroundColor(index == selectedAnswerIndex ? .gray : .white)
                                         .cornerRadius(10)
-                                        .shadow(radius: 5)
+                                        .shadow(radius: 1)
                                         .frame(height: 48)
                                 }
                                 else{
@@ -51,28 +58,28 @@ struct TestView: View {
                                         Rectangle()
                                             .foregroundColor(.green)
                                             .cornerRadius(10)
-                                            .shadow(radius: 5)
+                                            .shadow(radius: 1)
                                             .frame(height: 48)
                                     }
                                     else if index == selectedAnswerIndex && index != model.currentQuestion!.correctIndex{
                                         Rectangle()
                                             .foregroundColor(.red)
                                             .cornerRadius(10)
-                                            .shadow(radius: 5)
+                                            .shadow(radius: 1)
                                             .frame(height: 48)
                                     }
                                     else if index == model.currentQuestion!.correctIndex{
                                         Rectangle()
                                             .foregroundColor(.green)
                                             .cornerRadius(10)
-                                            .shadow(radius: 5)
+                                            .shadow(radius: 1)
                                             .frame(height: 48)
                                     }
                                     else{
                                         Rectangle()
                                             .foregroundColor(.white)
                                             .cornerRadius(10)
-                                            .shadow(radius: 5)
+                                            .shadow(radius: 1)
                                             .frame(height: 48)
                                     }
                                 }
@@ -113,7 +120,7 @@ struct TestView: View {
                         Rectangle()
                             .foregroundColor(.green)
                             .cornerRadius(10)
-                            .shadow(radius: 5)
+                            .shadow(radius: 1)
                             .frame(height: 48)
                         
                         Text(buttonText)

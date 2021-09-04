@@ -59,7 +59,7 @@ struct HomeView: View {
                                     .foregroundColor(.white)
                                     .frame(width: 100, height: 40)
                                     .cornerRadius(30)
-                                    .shadow(radius: 5)
+                                    .shadow(radius: 1)
                                 
                                 Text("Выйти")
                                     .bold()

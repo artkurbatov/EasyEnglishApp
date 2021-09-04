@@ -20,7 +20,7 @@ struct SingleModuleView: View {
             Rectangle()
                 .foregroundColor(.white)
                 .cornerRadius(10)
-                .shadow(radius: 5)
+                .shadow(radius: 1)
                 .aspectRatio(CGSize(width: 335, height: 100), contentMode: .fit)
             
             HStack {

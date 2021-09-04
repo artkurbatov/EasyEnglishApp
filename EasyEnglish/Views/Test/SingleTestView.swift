@@ -17,7 +17,7 @@ struct SingleTestView: View {
             Rectangle()
                 .foregroundColor(.white)
                 .cornerRadius(10)
-                .shadow(radius: 5)
+                .shadow(radius: 1)
                 .aspectRatio(CGSize(width: 335, height: 50), contentMode: .fit)
             
             Text(title)

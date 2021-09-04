@@ -10,28 +10,23 @@ import SwiftUI
 struct TestResultView: View {
     
     @EnvironmentObject var model: ContentModel
+
     var correct: Int
     
-    var percent: Double {
+    var percent: Float {
         guard model.currentModule != nil else {
             return 0
         }
-        return Double(correct)/Double(model.currentModule!.test.questions.count)
-    }
-    
-    var num: String {
-        return NSString(format:"%.0f", percent * 100) as String
+        return Float(correct)/Float(model.currentModule!.test.questions.count)
     }
     
     var body: some View {
-        
         VStack {
             ZStack {
-                
                 Rectangle()
                     .foregroundColor(.white)
                     .cornerRadius(20)
-                    .shadow(radius: 10)
+                    .shadow(radius: 1)
                 
                 VStack {
                     Text("Ваш результат:")
@@ -41,15 +36,14 @@ struct TestResultView: View {
                         .padding(.top, 10)
                     
                     ZStack{
-                        Image(systemName: "circle.fill")
-                            .resizable()
-                            .frame(width: 65, height: 65)
-                            .foregroundColor(.yellow)
-                            .shadow(radius: 2)
+                        ProgressResultBarView(progress: percent)
+                            .frame(width: 75, height: 75, alignment: .center)
                         
-                        Text("\(num)%")
+                        Text(String(format: "%.0f %%", percent * 100))
                             .bold()
+                            .font(.title3)
                     }
+                    .padding(10)
                     
                     Divider().background(Color.black)
                     
@@ -87,7 +81,7 @@ struct TestResultView: View {
                     Rectangle()
                         .foregroundColor(.green)
                         .cornerRadius(10)
-                        .shadow(radius: 5)
+                        .shadow(radius: 1)
                         .frame(height: 48)
                     
                     Text("Завершить тест")
