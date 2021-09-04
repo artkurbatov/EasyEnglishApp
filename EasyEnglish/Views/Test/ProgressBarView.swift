@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProgressResultBarView: View {
+struct ProgressBarView: View {
     
     var progress: Float
     var color: Color {

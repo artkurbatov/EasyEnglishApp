@@ -37,7 +37,7 @@ struct TestResultView: View {
                         .padding(.top, 10)
                     
                     ZStack{
-                        ProgressResultBarView(progress: percent)
+                        ProgressBarView(progress: percent)
                             .frame(width: 75, height: 75, alignment: .center)
                         
                         Text(String(format: "%.0f %%", percent * 100))
