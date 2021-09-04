@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B82B4C11268396A300D7AAC7 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82B4C10268396A300D7AAC7 /* ContentModel.swift */; };
 		B834113F2684615C006EA13E /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B834113E2684615C006EA13E /* data.json */; };
-		B8341141268462C4006EA13E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8341140268462C4006EA13E /* Models.swift */; };
+		B8341141268462C4006EA13E /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8341140268462C4006EA13E /* Modules.swift */; };
 		B835873A26919C9C00B6EA67 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B835873926919C9C00B6EA67 /* ContentDetailView.swift */; };
 		B835873C2691A21E00B6EA67 /* ContentDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B835873B2691A21E00B6EA67 /* ContentDescriptionView.swift */; };
 		B83DC4C5268393BD001D1289 /* EasyEnglishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DC4C4268393BD001D1289 /* EasyEnglishApp.swift */; };
@@ -33,7 +33,7 @@
 		70335C2619457DDD9AFF1360 /* Pods-EasyEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.release.xcconfig"; sourceTree = "<group>"; };
 		B82B4C10268396A300D7AAC7 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		B834113E2684615C006EA13E /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		B8341140268462C4006EA13E /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B8341140268462C4006EA13E /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
 		B835873926919C9C00B6EA67 /* ContentDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		B835873B2691A21E00B6EA67 /* ContentDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDescriptionView.swift; sourceTree = "<group>"; };
 		B83DC4C1268393BD001D1289 /* EasyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,7 +148,7 @@
 		B85145C8268394C60042CCE3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B8341140268462C4006EA13E /* Models.swift */,
+				B8341140268462C4006EA13E /* Modules.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			files = (
 				B85FCB062683A4B7003AA582 /* SingleModuleView.swift in Sources */,
 				B8C19A3B26AD7C20001E36AE /* LaunchView.swift in Sources */,
-				B8341141268462C4006EA13E /* Models.swift in Sources */,
+				B8341141268462C4006EA13E /* Modules.swift in Sources */,
 				B870AB60269351740092975A /* SingleContentView.swift in Sources */,
 				B82B4C11268396A300D7AAC7 /* ContentModel.swift in Sources */,
 				B8771FDC269214E400560104 /* SingleTestView.swift in Sources */,

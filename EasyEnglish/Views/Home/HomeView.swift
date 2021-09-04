@@ -16,7 +16,6 @@ struct HomeView: View {
         
         NavigationView {
             VStack (alignment: .leading) {
-                
                 ScrollView {
                     LazyVStack {
                         ForEach(model.modules) { module in

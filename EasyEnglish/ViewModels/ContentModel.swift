@@ -28,8 +28,6 @@ class ContentModel: ObservableObject {
     @Published var currentTestSelected: Int?
     
     
-    var lessonDescription = 1
-    
     init() {
     }
     

@@ -12,7 +12,7 @@ import Firebase
 struct EasyEnglishApp: App {
     
     init() {
-        FirebaseApp.configure()
+        setupFirebase()
     }
     
     var body: some Scene {
@@ -21,5 +21,12 @@ struct EasyEnglishApp: App {
                 .environmentObject(ContentModel())
                
         }
+    }
+}
+
+private extension EasyEnglishApp {
+    func setupFirebase() {
+        FirebaseConfiguration.shared.setLoggerLevel(.min)
+        FirebaseApp.configure()
     }
 }
