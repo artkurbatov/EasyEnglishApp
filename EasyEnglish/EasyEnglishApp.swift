@@ -19,7 +19,6 @@ struct EasyEnglishApp: App {
         WindowGroup {
             LaunchView()
                 .environmentObject(ContentModel())
-               
         }
     }
 }

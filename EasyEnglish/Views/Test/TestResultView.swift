@@ -30,6 +30,7 @@ struct TestResultView: View {
                 
                 VStack {
                     Text("Ваш результат:")
+                        .foregroundColor(.black)
                         .font(.title2)
                         .bold()
                         
@@ -40,6 +41,7 @@ struct TestResultView: View {
                             .frame(width: 75, height: 75, alignment: .center)
                         
                         Text(String(format: "%.0f %%", percent * 100))
+                            .foregroundColor(.black)
                             .bold()
                             .font(.title3)
                     }
@@ -53,6 +55,7 @@ struct TestResultView: View {
                         
                         VStack{
                             Text("Верно:")
+                                .foregroundColor(.black)
                                 .padding(.bottom, 5)
                             Text("\(correct)")
                                 .foregroundColor(.green)
@@ -61,6 +64,7 @@ struct TestResultView: View {
                         
                         VStack{
                             Text("Неверно:")
+                                .foregroundColor(.black)
                                 .padding(.bottom, 5)
                             Text("\((model.currentModule?.test.questions.count ?? 0) - correct)")
                                 .foregroundColor(.red)
