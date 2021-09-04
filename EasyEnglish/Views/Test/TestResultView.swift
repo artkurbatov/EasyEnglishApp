@@ -10,7 +10,7 @@ import SwiftUI
 struct TestResultView: View {
     
     @EnvironmentObject var model: ContentModel
-
+    
     var correct: Int
     
     var percent: Float {

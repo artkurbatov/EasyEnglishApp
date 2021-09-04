@@ -83,7 +83,6 @@ struct TestView: View {
                                             .frame(height: 48)
                                     }
                                 }
-                                
                                 Text(model.currentQuestion!.answers[index])
                             }
                         })

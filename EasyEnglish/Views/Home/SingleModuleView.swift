@@ -16,7 +16,6 @@ struct SingleModuleView: View {
     var body: some View {
         
         ZStack {
-            
             Rectangle()
                 .foregroundColor(.white)
                 .cornerRadius(10)

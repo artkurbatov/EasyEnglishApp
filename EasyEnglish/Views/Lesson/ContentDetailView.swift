@@ -37,12 +37,10 @@ struct ContentDetailView: View {
             }
             else{
                 Button(action: {
-                    
                     model.nextLesson()
                     model.currentContentSelected = nil
                 }, label: {
                     ZStack{
-                        
                         Rectangle()
                             .foregroundColor(.green)
                             .cornerRadius(10)
