@@ -37,7 +37,7 @@ struct TestResultView: View {
                         .padding(.top, 10)
                     
                     ZStack{
-                        ProgressBarView(progress: percent)
+                        ProgressBarView(progress: percent, lineWidth: 10.0)
                             .frame(width: 75, height: 75, alignment: .center)
                         
                         Text(String(format: "%.0f %%", percent * 100))
@@ -52,7 +52,6 @@ struct TestResultView: View {
                     Spacer()
                     
                     HStack(spacing: 100) {
-                        
                         VStack{
                             Text("Верно:")
                                 .foregroundColor(.black)
@@ -79,6 +78,7 @@ struct TestResultView: View {
             Spacer()
             
             Button {
+                model.saveData(title: model.currentModule?.category ?? "", percent: percent)
                 model.currentTestSelected = nil
             } label: {
                 ZStack {
@@ -99,11 +99,9 @@ struct TestResultView: View {
     }
 }
 
-
 struct TestResultView_Previews: PreviewProvider {
     static var previews: some View {
         TestResultView(correct: 10)
             .environmentObject(ContentModel())
     }
 }
-

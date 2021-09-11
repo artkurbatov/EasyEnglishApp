@@ -10,7 +10,6 @@ import SwiftUI
 struct TestView: View {
     
     @EnvironmentObject var model: ContentModel
-    
     @State var selectedAnswerIndex: Int?
     @State var result = 0
     @State var wrong = 0
@@ -110,7 +109,6 @@ struct TestView: View {
                     else {
                         submitted = true
                         if selectedAnswerIndex == model.currentQuestion!.correctIndex{
-                            
                             result += 1
                         }
                     }
@@ -125,7 +123,6 @@ struct TestView: View {
                         Text(buttonText)
                             .bold()
                             .foregroundColor(.white)
-                        
                     }
                     .padding()
                 })
@@ -156,7 +153,6 @@ struct TestView: View {
         }
     }
 }
-
 
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {

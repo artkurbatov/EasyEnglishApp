@@ -35,7 +35,7 @@ struct SingleModuleView: View {
                         .bold()
                     
                     Text(description)
-                        .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
+                        .font(.callout)
                 }
                 .padding(.leading, 20)
                 
@@ -43,7 +43,7 @@ struct SingleModuleView: View {
             }
             .padding(.horizontal, 20)
         }
-        .padding(.top, 7)
+        .padding(.top, 5)
         .padding(.horizontal, 10)
     }
 }

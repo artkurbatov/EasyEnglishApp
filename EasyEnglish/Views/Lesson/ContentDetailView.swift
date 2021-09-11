@@ -18,11 +18,11 @@ struct ContentDetailView: View {
             ContentDescriptionView()
             
             if model.hasNextLesson(){
+                
                 Button(action: {
                     model.nextLesson()
                 }, label: {
                     ZStack{
-                        
                         Rectangle()
                             .foregroundColor(.green)
                             .cornerRadius(10)
@@ -58,7 +58,6 @@ struct ContentDetailView: View {
         .navigationBarTitle(model.currentLesson?.title ?? "")
     }
 }
-
 
 struct ContentDetailView_Previews: PreviewProvider {
     static var previews: some View {

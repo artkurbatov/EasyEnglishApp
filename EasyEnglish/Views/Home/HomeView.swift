@@ -19,7 +19,8 @@ struct HomeView: View {
                 ScrollView {
                     LazyVStack {
                         ForEach(model.modules) { module in
-                            VStack {
+                            
+                            VStack(spacing: 5) {
                                 NavigationLink(
                                     destination:
                                         ContentView()
@@ -47,28 +48,6 @@ struct HomeView: View {
                     }
                     .accentColor(.black)
                     .padding()
-                    
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            try! Auth.auth().signOut()
-                            model.checkLogin()
-                        }, label: {
-                            ZStack {
-                                Rectangle()
-                                    .foregroundColor(.white)
-                                    .frame(width: 100, height: 40)
-                                    .cornerRadius(30)
-                                    .shadow(radius: 1)
-                                
-                                Text("Выйти")
-                                    .bold()
-                                    .foregroundColor(.black)
-                            }
-                        })
-                        Spacer()
-                    }
-                    .padding(.bottom)
                 }
             }
             .navigationBarTitleDisplayMode(.inline)

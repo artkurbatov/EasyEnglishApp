@@ -14,6 +14,7 @@ class ContentModel: ObservableObject {
     @Published var loggedIn = false
     
     @Published var modules = [Module]()
+    @Published var results = [Result]()
     
     @Published var currentModule: Module?
     var currentModuleIndex = 0
@@ -27,15 +28,18 @@ class ContentModel: ObservableObject {
     @Published var currentContentSelected: Int?
     @Published var currentTestSelected: Int?
     
-    
     init() {
     }
     
     func checkLogin() {
         
         loggedIn = Auth.auth().currentUser != nil ? true : false
+        
+        if SingleUser.shared.user.name == "" {
+            getUserData()
+        }
     }
-
+    
     func getLocalData() {
         
         let url = Bundle.main.url(forResource: "data", withExtension: "json")
@@ -47,6 +51,50 @@ class ContentModel: ObservableObject {
         }
         catch{
             print(error)
+        }
+    }
+    
+    func getUserData() {
+        
+        guard Auth.auth().currentUser != nil else {
+            return
+        }
+        
+        let db = Firestore.firestore()
+        let path = db.collection("users").document(Auth.auth().currentUser!.uid)
+        path.getDocument { snapshot, error in
+            
+            guard error == nil, snapshot != nil else {
+                return
+            }
+            
+            let data = snapshot!.data()
+            let user = SingleUser.shared.user
+            user.name = data?["name"] as? String ?? ""
+        }
+        
+        db.collection("users").document(Auth.auth().currentUser!.uid).collection("results").getDocuments() { querySnapshot, error in
+            
+            guard error == nil, querySnapshot != nil else {
+                return
+            }
+            
+            for document in querySnapshot!.documents {
+                let title = document.data()["title"] as? String
+                let percent = document.data()["percent"] as? Float
+                self.results.append(Result(title: title ?? "", percent: percent ?? 0.0))
+            }
+        }
+    }
+    
+    func saveData(title: String, percent: Float) {
+        
+        if let loggedInUser = Auth.auth().currentUser {
+            
+            let db = Firestore.firestore()
+            let path = db.collection("users").document(loggedInUser.uid).collection("results").document("test\(self.results.count + 1)")
+            path.setData(["title": title, "percent" : percent], merge: true)
+            self.results.append(Result(title: title, percent: percent))
         }
     }
     
@@ -103,7 +151,6 @@ class ContentModel: ObservableObject {
         
         if currentModule?.test.questions.count ?? 0 > 0 {
             currentQuestion = currentModule!.test.questions[currentQuestionIndex]
-            
         }
     }
     
@@ -121,7 +168,7 @@ class ContentModel: ObservableObject {
     }
     
     func getPercent(correct: Int, totalCount: Int?) -> Float {
-     
+        
         guard totalCount != nil else {
             return 0.0
         }

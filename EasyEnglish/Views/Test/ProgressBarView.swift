@@ -10,6 +10,8 @@ import SwiftUI
 struct ProgressBarView: View {
     
     var progress: Float
+    var lineWidth: Float
+    
     var color: Color {
         if progress < 0.5 {
             return .red
@@ -25,13 +27,13 @@ struct ProgressBarView: View {
     var body: some View {
         ZStack {
             Circle()
-                .stroke(lineWidth: 10.0)
+                .stroke(lineWidth: CGFloat(lineWidth))
                 .opacity(0.3)
                 .foregroundColor(.gray)
             
             Circle()
                 .trim(from: 0.0, to: CGFloat(min(progress, 1.0)))
-                .stroke(style: StrokeStyle(lineWidth: 10.0, lineCap: .round, lineJoin: .round))
+                .stroke(style: StrokeStyle(lineWidth: CGFloat(lineWidth), lineCap: .round, lineJoin: .round))
                 .foregroundColor(color)
                 .rotationEffect(Angle(degrees: 270.0))
         }

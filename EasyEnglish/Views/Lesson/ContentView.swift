@@ -14,9 +14,11 @@ struct ContentView: View {
     var body: some View {
         
         ScrollView{
-            LazyVStack {
+            LazyVStack(spacing: 5) {
+                
                 if model.currentModule != nil {
                     ForEach(0..<model.currentModule!.content.lessons.count) { index in
+                        
                         NavigationLink(
                             destination: ContentDetailView()
                                 .onAppear(perform: {

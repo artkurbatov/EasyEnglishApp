@@ -73,6 +73,7 @@ struct LoginView: View {
             }
             
             Button(action: {
+                
                 if login == LoginMode.login {
                     
                     Auth.auth().signIn(withEmail: email, password: password) { result, error in
@@ -83,6 +84,7 @@ struct LoginView: View {
                         }
                         
                         self.errorMessage = nil
+                        self.model.getUserData()
                         self.model.checkLogin()
                     }
                 }

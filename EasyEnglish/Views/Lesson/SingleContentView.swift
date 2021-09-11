@@ -48,4 +48,3 @@ struct SingleContentView: View {
         .padding(.bottom, 10)
     }
 }
-

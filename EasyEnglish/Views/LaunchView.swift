@@ -21,10 +21,25 @@ struct LaunchView: View {
                 })
         }
         else {
-            HomeView()
-                .onAppear(perform: {
-                    model.getLocalData()
-                })
+            TabView {
+                HomeView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "book.fill")
+                            Text("Обучение")
+                        }
+                    }
+                ProfileView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "person.fill")
+                            Text("Профиль")
+                        }
+                    }
+            }
+            .onAppear(perform: {
+                model.getLocalData()
+            })
         }
     }
 }

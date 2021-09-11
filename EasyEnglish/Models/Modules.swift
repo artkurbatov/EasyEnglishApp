@@ -21,7 +21,6 @@ struct Content: Decodable, Identifiable {
     var image: String
     var description: String
     var lessons: [Lesson]
-    
 }
 
 struct Lesson: Decodable, Identifiable {
@@ -29,7 +28,6 @@ struct Lesson: Decodable, Identifiable {
     var id: Int
     var title: String
     var explanation: String
-    
 }
 
 struct Test: Decodable, Identifiable {
@@ -44,4 +42,14 @@ struct Question: Decodable, Identifiable {
     var content: String
     var correctIndex: Int
     var answers: [String]
+}
+
+class User {
+    var name = ""
+    var results: [Result]?
+}
+
+struct Result: Hashable {
+    var title: String
+    var percent: Float
 }
