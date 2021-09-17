@@ -53,7 +53,7 @@ struct TestView: View {
                                         .frame(height: 48)
                                 }
                                 else{
-                                    if index == selectedAnswerIndex && index == model.currentQuestion!.correctIndex{
+                                    if (index == selectedAnswerIndex && index == model.currentQuestion!.correctIndex) || index == model.currentQuestion!.correctIndex{
                                         Rectangle()
                                             .foregroundColor(.green)
                                             .cornerRadius(10)
@@ -63,13 +63,6 @@ struct TestView: View {
                                     else if index == selectedAnswerIndex && index != model.currentQuestion!.correctIndex{
                                         Rectangle()
                                             .foregroundColor(.red)
-                                            .cornerRadius(10)
-                                            .shadow(radius: 1)
-                                            .frame(height: 48)
-                                    }
-                                    else if index == model.currentQuestion!.correctIndex{
-                                        Rectangle()
-                                            .foregroundColor(.green)
                                             .cornerRadius(10)
                                             .shadow(radius: 1)
                                             .frame(height: 48)
