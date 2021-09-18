@@ -47,7 +47,7 @@ struct TestView: View {
                             ZStack{
                                 if submitted == false{
                                     Rectangle()
-                                        .foregroundColor(index == selectedAnswerIndex ? .gray : .white)
+                                        .foregroundColor(index == selectedAnswerIndex ? .gray.opacity(0.25) : .white)
                                         .cornerRadius(10)
                                         .shadow(radius: 1)
                                         .frame(height: 48)
