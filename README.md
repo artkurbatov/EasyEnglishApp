@@ -1,4 +1,7 @@
-# EasyEnglishApp - application designed to facilitate your study of English
+# EasyEnglishApp
+
+Application designed to facilitate your study of English
+
 Tech stack: SwiftUI, Firebase
 
 ## Login/Authorization
@@ -20,3 +23,11 @@ List of lessons inside the module and lesson example
 Test example and result presentation
 
 <img src="https://user-images.githubusercontent.com/105456398/195858067-8460f02b-528a-4128-b3e0-3feee3962b3e.png" width="200" /> <img src="https://user-images.githubusercontent.com/105456398/195860957-1a27f2bb-402d-4c04-935a-322d60989fba.png" width="200" />
+
+## Profile
+
+Test results history and sigh out button
+
+<img src="https://user-images.githubusercontent.com/105456398/195862185-70388aa3-dfc5-4be7-abb8-302e564b4867.png" width="200" />
+
+
